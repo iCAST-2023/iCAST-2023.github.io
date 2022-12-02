@@ -156,7 +156,7 @@ li {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
+        /*--background-color: transparent;--*/
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         -o-transition: padding .3s;
