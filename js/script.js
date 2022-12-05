@@ -1,222 +1,111 @@
+/**
+ * WEBSITE: https://themefisher.com
+ * TWITTER: https://twitter.com/themefisher
+ * FACEBOOK: https://www.facebook.com/themefisher
+ * GITHUB: https://github.com/themefisher/
+ */
 
-var $ = jQuery.noConflict();
-
-
-// Page Loader
-$(window).load(function () {
+(function ($) {
+  'use strict';
     
-    "use strict";
-	$('#loader').fadeOut();
-});
-
-
-
-    // jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function () {
-    
-    "use strict";
-    
-    $('a.page-scroll').bind('click', function (event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top - 68
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+  // navbarDropdown
+  if ($(window).width() < 992) {
+    $('.main-nav [data-toggle="dropdown"]').on('click', function () {
+      $(this).siblings('.dropdown-menu').animate({
+        height: 'toggle'
+      }, 300);
     });
-});
+  }
 
-
-
-// Highlight the top nav as scrolling occurs
-$('body').scrollspy({
-    target: '.navbar-fixed-top',
-	offset: 70
-	
-});
-
-
-
-// Closes the Responsive Menu on Menu Item Click
-$('.navbar-collapse ul li a').click(function () {
-    "use strict";
-    $('.navbar-toggle:visible').click();
-});
-    
-    
-    
-    
-    /*----------------------------------------------------*/
-    /*	Css3 Transition
-    /*----------------------------------------------------*/
-
-        $('*').each(function(){
-            if($(this).attr('data-animation')) {
-                var $animationName = $(this).attr('data-animation'),
-                    $animationDelay = "delay-"+$(this).attr('data-animation-delay');
-                $(this).appear (function() {
-                    $(this).addClass('animated').addClass($animationName);
-                    $(this).addClass('animated').addClass($animationDelay);
-                });
-            }
-        });
-    
-    
-
-    
-    /*--------------------------------------------------*/
-    /* Counter*/
-    /*--------------------------------------------------*/ 
-        
-
-                $('.timer').countTo();
-
-                $('.counter-item').appear(function() {
-                    $('.timer').countTo();
-                },{accY: -100});
-            
-        
-
-
-
-////------- Testimonials Carousel
-	
-var testimonial = $("#testimonial-carousel");
-
-testimonial.owlCarousel({
-	navigation : true,
-	pagination: true,
-	slideSpeed : 2500,
-	stopOnHover: true,
-	autoPlay: 3000,
-	singleItem: true,
-	transitionStyle : "fade",
-	navigationText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>']
-});
-
-	
-
-////------- Pricing Table
-
-$(document).ready(function() {
- 
-  $(".pricing").owlCarousel({
-        pagination: true,
-        navigation : false,
-        slideSpeed : 2500,
-		stopOnHover: true,
-    	autoPlay: 3000,
-    	singleItem:false,
-        itemsMobile : [550,1],
-        itemsDesktopSmall : [991,2],
-        items: 4,
-		transitionStyle : "fade",
-		navigationText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
+  // -----------------------------
+  // To Top Init
+  // -----------------------------
+  $('.to-top').on('click', function () {
+    $('body,html').animate({
+      scrollTop: 0
+    }, 500);
+    return false;
   });
- 
-});
 
+  $(document).ready(function () {
 
-////------- Latest News
-
-$(document).ready(function() {
- 
-  $(".latest-news").owlCarousel({
-        pagination: true,
-        navigation : false,
-        slideSpeed : 2500,
-		stopOnHover: true,
-    	autoPlay: 4000,
-    	singleItem:false,
-        itemsMobile : [550,1],
-        itemsDesktopSmall : [991,2],
-        items: 3,
-		transitionStyle : "fade",
-		navigationText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
-  });
- 
-});
-
-
-
-
-// Team Carousel
-
-$(document).ready(function() {
- 
-  $(".our-team").owlCarousel({
-        pagination: true,
-        slideSpeed : 2500,
-		stopOnHover: true,
-    	autoPlay: 3000,
-        items: 4,
-    	//singleItem:true,
-        itemsMobile : [550,1],
-        itemsDesktopSmall : [991,2],
-		transitionStyle : "fade",
-		navigationText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
-  });
- 
-});
-
-
-
-////------- Partner/CLients
-
-$(document).ready(function() {
- 
-  $(".clients").owlCarousel({
-        pagination: false,
-        navigation : true,
-        slideSpeed : 2500,
-		stopOnHover: true,
-    	autoPlay: 3000,
-    	singleItem:false,
-        itemsMobile : [550,1],
-        itemsDesktopSmall : [991,2],
-        items: 5,
-		transitionStyle : "fade",
-		navigationText: ['<i class="fa fa-chevron-left"></i>','<i class="fa fa-chevron-right"></i>']
-  });
- 
-});
-
-
-
-
-$ ( function () {
-
-	$(".video").fitVids();
-	
-});
-
-
-
-
-
-        // Tab------------------------------
-
-
-$('#team a').click(function (e) {
-  e.preventDefault()
-  $(this).tab('show')
-})
-
-
-
-
-/*---------------------------------------------------*/
-    /* Progress Bar
-    /*---------------------------------------------------*/
-    $(document).ready(function($) {
-	"use strict";
-    
-        $('.skill-shortcode').appear(function() {
-            $('.progress').each(function(){ 
-                $('.progress-bar').css('width',  function(){ return ($(this).attr('data-percentage')+'%')});
-            });
-        },{accY: -100});
-        
-        
+    // -----------------------------
+    //  Screenshot Slider
+    // -----------------------------
+    $('.speaker-slider').slick({
+      slidesToShow: 3,
+      centerMode: true,
+      infinite: true,
+      autoplay: true,
+      arrows: true,
+      responsive: [{
+          breakpoint: 1440,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 500,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
     });
-	
+    // -----------------------------
+    //  Count Down JS
+    // -----------------------------
+    $('.timer').syotimer({
+      year: 2021,
+      month: 12,
+      day: 9,
+      hour: 20,
+      minute: 30
+    });
 
+    // -----------------------------
+    // Magnific Popup
+    // -----------------------------
+    $('.image-popup').magnificPopup({
+      type: 'image',
+      removalDelay: 160, //delay removal by X to allow out-animation
+      callbacks: {
+        beforeOpen: function () {
+          // just a hack that adds mfp-anim class to markup
+          this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+          this.st.mainClass = this.st.el.attr('data-effect');
+        }
+      },
+      closeOnContentClick: true,
+      midClick: true,
+      fixedContentPos: false,
+      fixedBgPos: true
+
+    });
+    
+    // gallery-wrapper init
+    if (($('.gallery-wrapper').length) !== 0) {
+      var Shuffle = window.Shuffle;
+      var jQuery = window.jQuery;
+
+      var myShuffle = new Shuffle(document.querySelector('.gallery-wrapper'), {
+        itemSelector: '.gallery-item',
+        buffer: 1
+      });
+
+      jQuery('input[name="gallery-filter"]').on('change', function (evt) {
+        var input = evt.currentTarget;
+        if (input.checked) {
+          myShuffle.filter(input.value);
+        }
+      });
+    }
+  });
+
+})(jQuery);
