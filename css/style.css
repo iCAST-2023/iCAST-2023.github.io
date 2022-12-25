@@ -803,7 +803,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .footer-main {
   background: #272735;
-  padding: 90px 0;
+  padding: 10px 0;
 }
 @media (max-width: 767px) {
   .footer-main {
@@ -1369,7 +1369,7 @@ select.form-control:not([size]):not([multiple]) {
   }
 }
 .schedule .schedule-contents .schedule-item ul li .subject {
-  width: 30%;
+  width: 70%;
 }
 @media (max-width: 1200px) {
   .schedule .schedule-contents .schedule-item ul li .subject {
@@ -1397,7 +1397,7 @@ select.form-control:not([size]):not([multiple]) {
   border-color: #e5e5e5;
 }
 .schedule .schedule-contents .schedule-item li.schedule-details .block {
-  padding: 10px 40px;
+  padding: 20px 40px;
   background: #fff;
   width: 100%;
   transition: 0.2s ease-in;
