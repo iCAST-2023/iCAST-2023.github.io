@@ -765,7 +765,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .page-title {
   position: relative;
-  padding: 165px 0 65px;
+  padding: 110px 0 40px;
 }
 @media (max-width: 1200px) {
   .page-title {
