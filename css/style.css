@@ -50,7 +50,7 @@ h6 {
 p, a, li, blockquote, label {
   font-size: 1rem;
   line-height: 26px;
-  color: #848484;
+  color: #a8a8a8;
   margin-bottom: 0;
 }
 
@@ -189,7 +189,7 @@ ul.social-links li a i {
 
 span.alternate {
   color: #ff6600;
-  font-style: italic;
+/*  font-style: italic;*/
   font-weight: 400;
 }
 
@@ -546,7 +546,7 @@ select.form-control:not([size]):not([multiple]) {
   }
 }
 .main-nav .navbar-brand {
-  padding: 35px 40px 35px 50px;
+/*  padding: 35px 40px 35px 50px;*/
   border-right: 1px solid #e5e5e5;
 }
 @media (max-width: 1200px) {
@@ -802,7 +802,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .footer-main {
-  background: #272735;
+  background: #0F1547;
   padding: 10px 0;
 }
 @media (max-width: 767px) {
@@ -843,7 +843,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .subfooter {
-  background: #2a2a37;
+  background: #0F1547;
   padding: 18px 0;
 }
 .subfooter .copyright-text p {
