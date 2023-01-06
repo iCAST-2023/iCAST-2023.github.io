@@ -862,7 +862,7 @@ select.form-control:not([size]):not([multiple]) {
   height: 45px;
   width: 45px;
   text-align: center;
-  background: #ff6600;
+  background: #ff660000;
   float: right;
 }
 .subfooter .to-top i {
