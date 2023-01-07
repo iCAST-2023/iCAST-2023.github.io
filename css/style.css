@@ -930,7 +930,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .banner {
-  padding: 250px 0 150px;
+  padding: 150px 0 250px;
   position: relative;
 }
 @media (max-width: 1024px) {
