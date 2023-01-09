@@ -844,7 +844,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .subfooter {
   background: #0F1547;
-  padding: 18px 0;
+  padding-top: 18px;
 }
 .subfooter .copyright-text p {
   font-family: "Montserrat", sans-serif;
@@ -930,7 +930,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .banner {
-  padding: 150px 0 250px;
+  padding: 150px 0 50px;
   position: relative;
 }
 @media (max-width: 1024px) {
@@ -1112,7 +1112,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 .about .content-block h2:after {
   content: "";
-  width: 60px;
+  width: 0px;
   height: 3px;
   background: #ff6600;
   display: block;
