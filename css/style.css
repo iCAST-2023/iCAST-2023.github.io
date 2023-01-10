@@ -47,10 +47,17 @@ h6 {
   margin-top: 2rem;
 }
 
-p, a, li, blockquote, label {
+p, li, blockquote, label {
   font-size: 1rem;
   line-height: 26px;
-  color: #a8a8a8;
+  color: #000000;
+  margin-bottom: 0;
+}
+
+a{
+  font-size: 1rem;
+  line-height: 26px;
+  color: #0000ff;
   margin-bottom: 0;
 }
 
