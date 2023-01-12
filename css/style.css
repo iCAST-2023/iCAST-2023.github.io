@@ -1964,19 +1964,19 @@ select.form-control:not([size]):not([multiple]) {
   }
 }
 .sponsors .block .image-block {
-  padding: 45px 0;
+/*  padding: 45px 0;*/
   background: #fff;
-  width: 244px;
+  width: 200px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid transparent;
   margin-bottom: 10px;
 }
 .sponsors .block .image-block img {
-  height: 55px;
+/*  height: 55px;*/
 }
 .sponsors .block .image-block:hover {
-  border: 1px solid #ff6600;
+/*  border: 1px solid #ff6600;*/
 }
 .sponsors .sponsor-btn {
   margin-top: 10px;
