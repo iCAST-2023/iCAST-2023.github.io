@@ -996,7 +996,6 @@ select.form-control:not([size]):not([multiple]) {
   font-family: "Montserrat", sans-serif;
 }
 .banner .block h1 {
-  text-transform: uppercase;
   font-size: 5.5rem;
   color: #ff6600;
   font-weight: 500;
