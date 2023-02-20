@@ -1941,7 +1941,7 @@ select.form-control:not([size]):not([multiple]) {
 .sponsors .block .image-block {
 /*  padding: 45px 0;*/
   background: #fff;
-  width: 200px;
+  width: 150px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: 1px solid transparent;
