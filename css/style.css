@@ -82,7 +82,7 @@ ul.social-links li a i {
 }
 
 .shadow, .testimonial .testimonial-item .comment:hover, .news-hr .news-post-hr:hover, ul.pagination .active a, ul.pagination li a:hover, ul.pagination li a:focus, .sponsors .block .image-block:hover, .schedule.two .schedule-contents, .speakers.white .speaker-item:hover {
-  box-shadow: 0px 0px 30px 0px rgba(11, 29, 66, 0.15);
+/*  box-shadow: 0px 0px 30px 0px rgba(11, 29, 66, 0.15);*/
 }
 
 .border-bottom {
